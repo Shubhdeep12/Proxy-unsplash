@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     let unsplashResponse = null;
 
     try {
-      unsplashResponse = await axios.get(`search/photos/?query=${query}&page=${page}&limit=10&client_id=${process.env.REACT_APP_UNSPLASH_ACCESS_KEY}`);
+      unsplashResponse = await axios.get(`search/photos/?query=${query}&page=${page}&limit=10&client_id=${process.env.UNSPLASH_ACCESS_KEY}`);
     } catch (error) {
       res.status(error.response.status).send(error.response.data);
       }
